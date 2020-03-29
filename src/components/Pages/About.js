@@ -7,7 +7,7 @@ export default function About() {
             <br/>
             <p>A Simple Project Built on MERN stack. The whole purpose of the project personally for me was to learn React as I am a Back-End Developer with horrible Front-end Skills.
               Another reason was to built something that would be of some value to others around me. The project is hosted on AWS EC2 FREE TIER but I would be more than willing to upgrade it 
-              if it has gathers some attention.
+              if it gathers some attention.
               <br/>
               <br/>
               <span><strong>TECH STACK :</strong></span>

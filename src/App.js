@@ -19,7 +19,7 @@ class App extends Component {
 
   async componentDidMount() {
     this.setState({ loading: true })
-    let countriesData = await axios.get("http://localhost:4000/api/countries")
+    let countriesData = await axios.get("/api/countries")
     let totalData = await axios.get("https://corona.lmao.ninja/all");
     this.setState({ countries: countriesData.data.data.collectiveData,totalStats:totalData.data, loading: false })
   }

@@ -19,14 +19,14 @@ class App extends Component {
 
   async componentDidMount() {
     this.setState({ loading: true })
-    let countriesData = await axios.get("http://localhost:4000/countries")
+    let countriesData = await axios.get("http://localhost:4000/api/countries")
     let totalData = await axios.get("https://corona.lmao.ninja/all");
     this.setState({ countries: countriesData.data.data.collectiveData,totalStats:totalData.data, loading: false })
   }
 
   getCountryData = async (name) => {
     this.setState({ loading: true })
-    let countriesData = await axios.get(`http://localhost:4000/country/${name}`)
+    let countriesData = await axios.get(`http://localhost:4000/api/country/${name}`)
     this.setState({ countries: [countriesData.data.data.collectiveData], loading: false })
   }
 
@@ -36,7 +36,7 @@ class App extends Component {
   }
   getCompleteCountryData = async (name) => {
     this.setState({ loading: true })
-    let countryData = await axios.get(`http://localhost:4000/country/${name}`)
+    let countryData = await axios.get(`http://localhost:4000/api/country/${name}`)
     this.setState({country:{date:countryData.data.data.date, collectiveData:countryData.data.data.collectiveData}})
     this.setState({ loading: false })
   }

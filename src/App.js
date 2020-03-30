@@ -36,7 +36,7 @@ class App extends Component {
   }
   getCompleteCountryData = async (name) => {
     this.setState({ loading: true })
-    let countryData = await axios.get(`/api/countries/${name}`)
+    let countryData = await axios.get(`/api/country/${name}`)
     this.setState({ country:{date:countryData.data.data.date,  collectiveData:countryData.data.data.collectiveData}})
     this.setState({ loading: false })
   }

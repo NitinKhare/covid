@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import Navbar from './components/layout/Navbar'
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 import Countries from './components/country/Countries'
 import Country from './components/country/Country'
 import Alert from './components/layout/Alert'
@@ -69,6 +70,7 @@ class App extends Component {
             </Switch>
 
           </div>
+          <Footer />
         </div>
       </Router>
     );

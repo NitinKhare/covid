@@ -12,7 +12,7 @@ export class Countries extends Component {
             )
         }else{
         return (
-            <div style={countryStyle}>
+            <div className="row">
                 {this.props.countries.map((country)=>(
                     <CountryItem key={country.country} country = {country}/>
                 ))}
@@ -22,10 +22,10 @@ export class Countries extends Component {
     }
 }
 
-var countryStyle = {
-    display :'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
-    gridGap: '3rem'
-}
+// var countryStyle = {
+//     display :'grid',
+//     gridTemplateColumns: 'repeat(3, 1fr)',
+//     gridGap: '3rem'
+// }
 
 export default Countries

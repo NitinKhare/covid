@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 function CountryItem(props) {
         return (
-            <div >
+            <div className="col-md-4 col-12" >
             <div className="card" style={{width:"18em"}}>
                 <img className="card-img-top" style={{height:"12em" , border: "1px solid grey"}} src={props.country.countryInfo.flag} alt={props.country.country} />
                     <div className="card-body" >

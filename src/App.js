@@ -27,7 +27,7 @@ class App extends Component {
   getCountryData = async (name) => {
     this.setState({ loading: true })
     let countriesData = await axios.get(`/api/country/${name}`)
-    this.setState({ countries: [countriesData.data.data.collectiveData], loading: false })
+    this.setState({ totalStats:countriesData.data.data.collectiveData, countries: [countriesData.data.data.collectiveData], loading: false })
   }
 
   setAlert = (msg, type) => {
@@ -36,8 +36,8 @@ class App extends Component {
   }
   getCompleteCountryData = async (name) => {
     this.setState({ loading: true })
-    let countryData = await axios.get(`/api/country/${name}`)
-    this.setState({country:{date:countryData.data.data.date, collectiveData:countryData.data.data.collectiveData}})
+    let countryData = await axios.get(`/api//countries/${name}`)
+    this.setState({ country:{date:countryData.data.data.date,  collectiveData:countryData.data.data.collectiveData}})
     this.setState({ loading: false })
   }
 

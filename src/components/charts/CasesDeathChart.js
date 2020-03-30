@@ -31,7 +31,7 @@ import {Line} from 'react-chartjs-2';
           options={{
             title:{
               display:true,
-              text:'Rise in CoronaVirus cases',
+              text:'Rise in Deaths from CoronaVirus cases',
               fontSize:20
             },
             legend:{
